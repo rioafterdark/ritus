@@ -6,12 +6,12 @@
 
 1. Create a repo (e.g. `ritus`) and push these files to the root of `main`:
    ```
-   index.html  style.css  art.js  app.js  sw.js  manifest.webmanifest  icons/
+   index.html  style.css  art.js  app.js  sw.js  manifest.webmanifest  icon-192.png  icon-512.png  icon-maskable-512.png  apple-touch-icon.png
    ```
 2. Repo → **Settings → Pages** → Source: *Deploy from a branch* → `main` / `(root)` → Save.
 3. Open `https://<your-user>.github.io/ritus/` on your phone → *Add to Home Screen*.
 
-**Shipping updates:** bump `VERSION` in `sw.js` (currently `ritus-v3` → `ritus-v4`) whenever you change files. The app serves the cached copy instantly and picks up the new one on the next launch.
+**Shipping updates:** bump `VERSION` in `sw.js` (currently `ritus-v4` → `ritus-v5`) whenever you change files. The app serves the cached copy instantly and picks up the new one on the next launch.
 
 ## Data
 

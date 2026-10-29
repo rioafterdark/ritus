@@ -1,10 +1,10 @@
 /* Ritus service worker — offline shell, stale-while-revalidate.
    Bump VERSION when you deploy changes you want users to pick up on the next load. */
-const VERSION = 'ritus-v3';
+const VERSION = 'ritus-v4';
 const FONTS = 'ritus-fonts';
 const SHELL = [
   './', './index.html', './style.css', './art.js', './app.js', './manifest.webmanifest',
-  './icons/icon-192.png', './icons/icon-512.png', './icons/apple-touch-icon.png',
+  './icon-192.png', './icon-512.png', './apple-touch-icon.png',
 ];
 
 self.addEventListener('install', e => {
