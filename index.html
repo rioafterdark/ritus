@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Ritus</title>
+<meta name="description" content="Ritus — daily rites, kept like a vow. A gamified habit tracker.">
+<meta name="theme-color" content="#09080a">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Ritus">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..700;1,6..96,400..600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Josefin+Sans:wght@400;600&family=UnifrakturMaguntia&display=swap">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <button class="brand" id="brand" aria-label="Ritus — character sheet">
+    <img class="brand-mark" src="icons/icon-192.png" alt="">
+    <span class="bl">Ritus</span>
+  </button>
+  <div class="date" id="date"></div>
+  <button class="icon-btn" id="btn-settings" aria-label="Settings"><i data-ic="gear"></i></button>
+</header>
+
+<main id="app">
+  <section class="view" id="v-sheet" aria-label="Character sheet"></section>
+  <section class="view" id="v-rites" aria-label="Daily rites" hidden></section>
+  <section class="view" id="v-vault" aria-label="Vault" hidden></section>
+  <section class="view" id="v-sigilla" aria-label="Achievements" hidden></section>
+  <section class="view" id="v-annales" aria-label="Records" hidden></section>
+</main>
+
+<nav class="tabs" id="tabs">
+  <button data-view="sheet"><i data-ic="helm"></i><span>Persona</span></button>
+  <button data-view="rites"><i data-ic="flame"></i><span>Ritus</span><b class="badge" id="rites-badge"></b></button>
+  <button data-view="vault"><i data-ic="chest"></i><span>Arca</span></button>
+  <button data-view="sigilla"><i data-ic="lozenge"></i><span>Sigilla</span></button>
+  <button data-view="annales"><i data-ic="book"></i><span>Annales</span></button>
+</nav>
+
+<div id="overlay" hidden></div>
+<div id="drawer" hidden>
+  <div class="drawer-bg" data-close></div>
+  <div class="drawer-panel" id="drawer-panel" role="dialog" aria-modal="true"></div>
+</div>
+<div id="toast" hidden></div>
+<input type="file" id="import-file" accept="application/json,.json" hidden>
+
+<script src="art.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
